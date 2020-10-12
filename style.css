@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 1em;
+    font-size: 15px;
+}
+
+.plans {
+    display: flex;
+}
+
+.plan {
+    text-align: center;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #888888;
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+}
+
+.plan-title {
+    padding-top: 2em;
+}
+
+.plan-highlighted, .button {
+    color: white;
+    background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.plan-highlighted .button {
+    color:  hsl(237, 63%, 64%);
+}
+
+.top-border {
+    border-top: 1px solid hsl(234, 14%, 74%);
+}
+
+.plan-highlighted .button {
+    background: white;
+}
+
+.plan-features {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.plan-feature {
+    list-style: none;
+    padding: 1em 0; 
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.button {
+    width: 100%;
+    margin: 2em 0;
+    border-radius: .5em;
+    padding: 1em 0;
+    letter-spacing: 2px;
+    color: white;
+}
+.button a {
+    cursor: pointer;
+}
+.annual-price {
+    display: none;
+}
+
+.price {
+    font-size: 3.5em;
+    margin: .5em 0;
+}
+
+
