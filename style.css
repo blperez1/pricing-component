@@ -84,4 +84,9 @@ body {
     margin: .5em 0;
 }
 
+@media screen and (min-width: 375px) {
+    .plans {
+        flex-direction: column;
+    }
+}
 
