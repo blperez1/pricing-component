@@ -14,8 +14,86 @@ body {
     padding: 0;
     margin: 1em;
     font-size: 15px;
+} 
+
+.main-title {
+    text-align: center;
+    padding-top: 2em;
 }
 
+.toggle-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em;
+    
+}
+
+.toggle-div p {
+    padding: 6px 0;
+}
+
+/*toggle switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/*Plan pricing and info*/
 .plans {
     display: flex;
 }
@@ -33,17 +111,18 @@ body {
     padding-top: 2em;
 }
 
+.annual-price {
+    display: none;
+}
+
+.price {
+    font-size: 3.5em;
+    margin: .5em 0;
+}
+
 .plan-highlighted, .button {
     color: white;
     background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-}
-
-.plan-highlighted .button {
-    color:  hsl(237, 63%, 64%);
-}
-
-.top-border {
-    border-top: 1px solid hsl(234, 14%, 74%);
 }
 
 .plan-highlighted .button {
@@ -57,36 +136,38 @@ body {
     margin: 0;
 }
 
-
 .plan-feature {
     list-style: none;
     padding: 1em 0; 
     border-bottom: 1px solid hsl(234, 14%, 74%);
 }
 
+.top-border {
+    border-top: 1px solid hsl(234, 14%, 74%);
+}
+
+/*button styling */
 .button {
     width: 100%;
     margin: 2em 0;
     border-radius: .5em;
     padding: 1em 0;
     letter-spacing: 2px;
-    color: white;
+
 }
 .button a {
     cursor: pointer;
-}
-.annual-price {
-    display: none;
+    color: white;
 }
 
-.price {
-    font-size: 3.5em;
-    margin: .5em 0;
+.plan-highlighted .button a{
+    color:  hsl(237, 63%, 64%);
 }
 
 @media screen and (min-width: 375px) {
     .plans {
         flex-direction: column;
+
     }
 }
 
