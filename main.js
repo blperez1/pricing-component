@@ -1,15 +1,19 @@
-const toggle = document.querySelector('input[checkbox]');
-const annual = document.querySelector('annual-price');
-const monthly = document.querySelector('monthly-price');
+const toggle = document.querySelector('#toggleSwitch');
+const annual = document.querySelectorAll('.annual-price');
+const monthly = document.querySelectorAll('.monthly-price');
+
+monthly.forEach(month => month.classList.add("hide"))
+
 
 const monthlyAnnualPrices = () => {
     if(toggle.checked) {
-        annual.style.display = "block";
-        monthly.style.display = "none";
+        monthly.forEach(month => month.classList.remove("hide"))
+        annual.forEach(year =>  year.classList.add("hide"))
     }else {
-        annual.style.display = "none";
-        monthly.style.display = "block";
+        monthly.forEach(month => month.classList.add("hide"))
+        annual.forEach(year =>  year.classList.remove("hide"))
     }
 }
 
-toggle.addEventListener('click', monthlyAnnualPrices)
+
+toggle.addEventListener('click', monthlyAnnualPrices);
