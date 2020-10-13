@@ -1,1 +1,1 @@
-# pricing-componnent
+# pricing-component
