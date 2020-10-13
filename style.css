@@ -28,30 +28,22 @@ body {
     
 }
 
-.toggle-div p {
-    padding: 6px 35px;
-}
-
-.annual {
-    margin-left: auto;
-}
-
-.monthly {
-    margin-right: auto;
-}
 
 /*toggle switch*/
+
 .switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
+    
   }
   
   .switch input {
     opacity: 0;
     width: 0;
     height: 0;
+    margin: 0 auto;
   }
   
   .slider {
@@ -62,9 +54,9 @@ body {
     right: 0;
     bottom: 0;
     background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-
     -webkit-transition: .4s;
     transition: .4s;
+    width: 60px;
   }
   
   .slider:before {
@@ -120,7 +112,7 @@ body {
     padding-top: 2em;
 }
 
-.annual-price {
+.hide {
     display: none;
 }
 
@@ -178,6 +170,10 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .annual, .monthly { 
+        margin: auto;
+     }
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -193,6 +189,19 @@ body {
 
     .plan-highlighted {
         height: 33em;
+        padding-top: 2.20rem;
     }
+
+    .annual, .monthly {
+        padding: 6px 35px;
+    }
+    .annual {
+        margin: 0 0 0 auto;
+    }
+    
+    .monthly {
+        margin: 0 auto 0 0;
+        
+    } 
 }
 
